@@ -504,7 +504,8 @@ static NSString * kCSNavigationBarBoundsKeyPath = @"bounds";
         imageView.backgroundColor = [UIColor clearColor];
         imageView.translatesAutoresizingMaskIntoConstraints = NO;
         imageView.contentMode = UIViewContentModeCenter;
-        imageView.image = [self imageFromAlphaChannelOfImage:self.image replacementColor:self.contentColor];
+        //imageView.image = [self imageFromAlphaChannelOfImage:self.image replacementColor:self.contentColor];
+        imageView.image = self.image;
         _symbolView = imageView;
     } else {
         _symbolView = [[UIView alloc] initWithFrame:CGRectZero];
